@@ -4,7 +4,6 @@ from datetime import datetime as dt
 import os
 app = Flask(__name__)
 
-@app.route("")
 @app.route("/")
 @app.route("/index/")
 def home():
