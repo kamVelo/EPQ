@@ -11,11 +11,11 @@ def home():
 
 @app.route("/inputTempData",methods=["POST"])
 def inputTempData():
-    data = list(request.form.keys())
-    password = data[0]
+    data = list(request.form.items())
+    password = data[0][1]
     if(checkPassword(password)):
         date = str(dt.now())
-        temp = str(data[1])
+        temp = str(data[1][1])
 
         f = open("tempData.csv", "w")
         f.write(f"{date},{temp}\n")
@@ -23,13 +23,13 @@ def inputTempData():
     return "poop"
 @app.route("/dataOutage", methods=["POST"])
 def dataOutage():
-    data = list(request.form.keys())
-    password = data[0]
+    data = list(request.form.items())
+    password = data[0][1]
     if(checkPassword(password)):
         file = open("outages.csv","a")
         lastRecordTime = getLastTempRecord()[0]
         currTime = dt.now()
-        numFails = data[1]
+        numFails = data[1][1]
         file.write(f"{lastRecordTime},{currTime},{numFails}\n")
         file.close()
     return "poop"
