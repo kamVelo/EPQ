@@ -12,10 +12,10 @@
 #include <DallasTemperature.h>
 
 int R1= 1000; // Value of resistor for EC probe
-int EC_Read = 13;
+int EC_Read = 14;
 int ECPower = 12;
 
-int Temp_Pin = 14;
+int Temp_Pin = 13;
 OneWire oneWire(Temp_Pin);
 DallasTemperature sensors(&oneWire);
 
@@ -25,7 +25,7 @@ float Temp1_Value = 0;
 float Temp_Coef = 0.019; // You can leave as it is
 /////////////////This part needs your attention during calibration only///////////////
 float Calibration_PPM =1080 ; //Change to PPM reading measured with a separate meter
-float K=0.14; //You must change this constant once for your probe(see video)
+float K=4.05; //You must change this constant once for your probe(see video)
 float PPM_Con=0.5; //You must change this only if your meter uses a different factor
 /////////////////////////////////////////////////////////////////////////////////////
 //float CalibrationEC= (Calibration_PPM*2)/1000;
@@ -44,14 +44,14 @@ float Value=0;
 //https://youtu.be/-xKIczj9rVA
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.println("hello");
   sensors.begin();
   pinMode(EC_Read,INPUT);
   pinMode(ECPower,OUTPUT);
   
   
-  //Calibrate ();  After calibration put two forward slashes before this line of code
+  //Calibrate ();  //After calibration put two forward slashes before this line of code
 
 }
 void loop()
@@ -69,9 +69,16 @@ void GetEC()
   A_to_D= analogRead(EC_Read);
   A_to_D= analogRead(EC_Read);
   digitalWrite(ECPower,LOW);
-  Vdrop= (Vin*A_to_D) / 1024.0;
+  Serial.print("A_to_D: ");
+  Serial.println(A_to_D);
+  Vdrop= Vin * (A_to_D / 4095.0);
+
+  Serial.print("Vdrop: ");
+  Serial.println(Vdrop);
   R_Water = (Vdrop*R1) / (Vin-Vdrop);
   EC = 1000/ (R_Water*K);
+  Serial.print("EC at curr temp: ");
+  Serial.println(EC);
   EC_at_25 = EC / (1+ Temp_Coef*(Temperature-25.0));
   ppm=(EC_at_25)*(PPM_Con*1000);
   Serial.print(" EC: ");
@@ -106,7 +113,7 @@ void Calibrate ()
   Temp1_Value = Temp_C;
   Temperature_end=Temp_C;
   EC =CalibrationEC*(1+(Temp_Coef*(Temperature_end-25.0)));
-  Vdrop= (((Vin)*(A_to_D))/1024.0);
+  Vdrop= (((Vin)*(A_to_D))/4095.0);
   R_Water=(Vdrop*R1)/(Vin-Vdrop);
   float K_cal= 1000/(R_Water*EC);
   Serial.print("Replace K in line 23 of code with K = ");

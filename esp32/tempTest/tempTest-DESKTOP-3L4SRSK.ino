@@ -1,6 +1,6 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
-int tempPin = 8;
+int tempPin = 13;
 OneWire oneWire(tempPin);
 DallasTemperature sensors(&oneWire);
 

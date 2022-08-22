@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32621758-c321-4db2-a94a-24b5214dd73e" name="Default Changelist" comment="" />
+    <list default="true" id="32621758-c321-4db2-a94a-24b5214dd73e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/outageData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../esp32/ecProbeTest/ecProbeTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/ecProbeTest/ecProbeTest.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../esp32/tempTest/tempTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/tempTest/tempTest.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../esp32/zeroCrossDetection/zeroCrossDetection.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/zeroCrossDetection/zeroCrossDetection.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="2AyNZ1vLFmd7js0uafUtljDtCzt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,8 +27,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../AgriPod/app.py" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -62,34 +87,50 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1660016518815">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1660016518815" />
     <state x="421" y="92" key="FileChooserDialogImpl" timestamp="1659749556331">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="421" y="92" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1659749556331" />
-    <state width="1259" height="161" key="GridCell.Tab.0.bottom" timestamp="1659751285510">
+    <state width="1259" height="161" key="GridCell.Tab.0.bottom" timestamp="1659751601006">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1259" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1659751285510" />
-    <state width="1259" height="161" key="GridCell.Tab.0.center" timestamp="1659751285510">
+    <state width="1259" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1659751601006" />
+    <state width="1259" height="161" key="GridCell.Tab.0.center" timestamp="1659751601006">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1259" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1659751285510" />
-    <state width="1259" height="161" key="GridCell.Tab.0.left" timestamp="1659751285510">
+    <state width="1259" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1659751601006" />
+    <state width="1259" height="161" key="GridCell.Tab.0.left" timestamp="1659751601006">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1259" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1659751285510" />
-    <state width="1259" height="161" key="GridCell.Tab.0.right" timestamp="1659751285510">
+    <state width="1259" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1659751601006" />
+    <state width="1259" height="161" key="GridCell.Tab.0.right" timestamp="1659751601006">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1259" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1659751285510" />
+    <state width="1259" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1659751601006" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1658638666109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1658638666109" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1658638658380">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="337" y="163" key="com.intellij.ide.util.TipDialog" timestamp="1660131136255">
+      <screen x="0" y="0" width="1280" height="672" />
     </state>
+    <state x="337" y="163" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1660131136255" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1658638658380" />
   </component>
 </project>
