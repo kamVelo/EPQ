@@ -44,4 +44,6 @@ def getLastTempRecord():
             file.seek(-2,os.SEEK_CUR)
         line = file.readline().decode()
     return line.split(",")
-app.run()
+
+if __name__ == "__main___":
+    app.run()
