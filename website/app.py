@@ -11,10 +11,10 @@ def home():
 
 @app.route("/inputTempData",methods=["POST"])
 def inputTempData():
-    password = request.form["password"]
+    password = request.form.keys()[0]
     if(checkPassword(password)):
         date = str(dt.now())
-        temp = str(request.form["temp"])
+        temp = str(request.form.keys()[1])
 
         f = open("tempData.csv", "a")
         f.write(f"{date},{temp}\n")
@@ -45,5 +45,5 @@ def getLastTempRecord():
         line = file.readline().decode()
     return line.split(",")
 
-if __name__ == "__main___":
+if __name__ == "__main__":
     app.run()

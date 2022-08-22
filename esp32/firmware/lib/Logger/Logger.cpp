@@ -11,15 +11,15 @@ Logger::Logger(){
 
     WiFi.begin(SSID1,PWD1);
     int counter = 0;
-    while(WiFi.status() != WL_CONNECTED && counter < 21){
+    while(WiFi.status() != 3 && counter < 21){
         delay(250);
         counter++;
     }
 
-    if(WiFi.status() != WL_CONNECTED){ // if not at home or home wifi not working
+    if(WiFi.status() != 3){ // if not at home or home wifi not working
         WiFi.begin(SSID2,PWD2);
         counter = 0;
-        while(WiFi.status() != WL_CONNECTED && counter < 21){
+        while(WiFi.status() != 3 && counter < 21){
             delay(250);
             counter++;
         }
@@ -28,7 +28,7 @@ Logger::Logger(){
     EEPROM.begin(EEPROM_SIZE);
 
     // update server with num fails if necessary.
-    if(WiFi.status() == WL_CONNECTED){
+    if(WiFi.status() == 3){
         int numFails = getNumFailedSends();
         if(numFails != 0)
             sendNumFails(numFails);
@@ -36,10 +36,10 @@ Logger::Logger(){
 }
 
 void Logger::sendTempData(float temp){
-    if(WiFi.status() == WL_CONNECTED){
+    if(WiFi.status() == 3){
         WiFiClient client;
         HTTPClient http;
-        http.begin(client, "https://growhab.com/inputTempData");
+        http.begin(client, "https://www.growhab.com/inputTempData");
         http.addHeader("Content-Type", "application/x-www-form-urlencoded");
         String data = "password=" + String(DATA_PASSWORD) + "&temperature=" + String(temp);
         int respCode = http.POST(data);
@@ -73,7 +73,7 @@ void Logger::sendNumFails(int numFails){
     WiFiClient client;
     HTTPClient http;
 
-    http.begin(client, "https://growhab.com/dataOutage/");
+    http.begin(client, "http://growhab.net/dataOutage/");
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
     String data = "password=" + String(DATA_PASSWORD) + "&failedSends=" + numFails;
     int resp = http.POST(data);
