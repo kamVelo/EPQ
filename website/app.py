@@ -20,7 +20,7 @@ def inputTempData():
         f = open("tempData.csv", "w")
         f.write(f"{date},{temp}\n")
         f.close()
-    return "poop"
+    return str((password, checkPassword()))
 @app.route("/dataOutage", methods=["POST"])
 def dataOutage():
     data = list(request.form.items())
