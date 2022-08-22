@@ -4,8 +4,6 @@
     <list default="true" id="32621758-c321-4db2-a94a-24b5214dd73e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/outageData.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/postRequestTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../esp32/firmware/lib/Logger/Logger.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/firmware/lib/Logger/Logger.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../esp32/wifiTest/wifiTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/wifiTest/wifiTest.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -110,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661203412551</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bug fix 3">
+      <created>1661205374552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661205374552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -132,7 +137,8 @@
     <MESSAGE value="updates" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="bug fix 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix 2" />
+    <MESSAGE value="bug fix 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1660016518815">
