@@ -21,6 +21,21 @@ def inputTempData():
         f.write(f"{date},{temp}\n")
         f.close()
     return str((password, checkPassword(password)))
+
+@app.route("/inputECData",methods=["POST"])
+def inputTempData():
+    data = list(request.form.items())
+    password = data[0][1]
+    if(checkPassword(password)):
+        date = str(dt.now())
+        EC = str(data[1][1])
+
+        f = open("ECData.csv", "a")
+        f.write(f"{date},{EC}\n")
+        f.close()
+    return str((password, checkPassword(password)))
+
+
 @app.route("/dataOutage", methods=["POST"])
 def dataOutage():
     data = list(request.form.items())
