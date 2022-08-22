@@ -17,7 +17,7 @@ def inputTempData():
         date = str(dt.now())
         temp = str(data[1][1])
 
-        f = open("tempData.csv", "w")
+        f = open("tempData.csv", "a")
         f.write(f"{date},{temp}\n")
         f.close()
     return str((password, checkPassword(password)))
