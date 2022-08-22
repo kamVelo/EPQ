@@ -4,6 +4,7 @@ from datetime import datetime as dt
 import os
 app = Flask(__name__)
 
+@app.route("")
 @app.route("/")
 @app.route("/index/")
 def home():
@@ -19,6 +20,7 @@ def inputTempData():
         f = open("tempData.csv", "a")
         f.write(f"{date},{temp}\n")
         f.close()
+    return "poop"
 @app.route("/dataOutage", methods=["POST"])
 def dataOutage():
     password = request.form["password"]
@@ -29,7 +31,7 @@ def dataOutage():
         numFails = request.form["failed sends"]
         file.write(f"{lastRecordTime},{currTime},{numFails}\n")
         file.close()
-
+    return "poop"
 
 def getLastTempRecord():
     """

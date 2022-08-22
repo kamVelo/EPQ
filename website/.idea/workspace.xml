@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="32621758-c321-4db2-a94a-24b5214dd73e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/outageData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../esp32/ecProbeTest/ecProbeTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/ecProbeTest/ecProbeTest.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../esp32/tempTest/tempTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/tempTest/tempTest.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../esp32/zeroCrossDetection/zeroCrossDetection.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/zeroCrossDetection/zeroCrossDetection.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -82,6 +79,14 @@
       <option name="presentableId" value="Default" />
       <updated>1655977916871</updated>
     </task>
+    <task id="LOCAL-00001" summary="commit message">
+      <created>1661139305590</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661139305590</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -97,6 +102,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit message" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit message" />
   </component>
   <component name="WindowStateProjectService">
     <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1660016518815">
