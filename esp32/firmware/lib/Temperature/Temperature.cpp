@@ -1,16 +1,14 @@
 #include "Temperature.h"
 
-void Temperature::begin(int tempPin_, float setpoint_, int firePin_)
-{
+Temperature::Temperature(int tempPin_, float setpoint_, int firePin_){
     tempPin = tempPin_;
     setpoint = setpoint_;
-    firePin = firePin_;
+    powerPin = firePin_;
 
-    OneWire oneWire(tempPin);
-    DallasTemperature sensors(&oneWire);
+    oneWire = OneWire(tempPin);
+    sensors = DallasTemperature(&oneWire);
     sensors.begin();
-    pinMode(firePin, OUTPUT);
-    digitalWrite(firePin, LOW);
+    pinMode(powerPin, OUTPUT);
 }
 
 float Temperature::getTemp(){
@@ -18,13 +16,18 @@ float Temperature::getTemp(){
     return sensors.getTempCByIndex(0);
 }
 
-float getPIDDelay(float temp){
-    return 0;
+void Temperature::heat(float temp){
+    if(temp < setpoint - 1.5){
+        turnOn();
+        delay(15000);
+        turnOff();
+    }
 }
-void Temperature::fireHeaterPulse(float PIDValue){
-    //delayMicroseconds(maximumFiringDelay - PIDValue);
-    //delay(15);
-    //digitalWrite(firePin, HIGH);
-    //delayMicroseconds(100);
-    digitalWrite(firePin, LOW);
+
+void Temperature::turnOn(){
+    digitalWrite(powerPin, HIGH);
 }
+void Temperature::turnOff(){
+    digitalWrite(powerPin, LOW);
+}
+

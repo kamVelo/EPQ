@@ -25,7 +25,7 @@ float Temp1_Value = 0;
 float Temp_Coef = 0.019; // You can leave as it is
 /////////////////This part needs your attention during calibration only///////////////
 float Calibration_PPM =1080 ; //Change to PPM reading measured with a separate meter
-float K=4.05; //You must change this constant once for your probe(see video)
+float K=1.98; //You must change this constant once for your probe(see video)
 float PPM_Con=0.5; //You must change this only if your meter uses a different factor
 /////////////////////////////////////////////////////////////////////////////////////
 //float CalibrationEC= (Calibration_PPM*2)/1000;
@@ -44,7 +44,7 @@ float Value=0;
 //https://youtu.be/-xKIczj9rVA
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println("hello");
   sensors.begin();
   pinMode(EC_Read,INPUT);

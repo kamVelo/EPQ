@@ -6,7 +6,7 @@
 #include <DallasTemperature.h>
 class Temperature{
     private:
-        int tempPin,setpoint, firePin;
+        int tempPin,setpoint, powerPin;
         int previousReadTime = 0;
         int maximumFiringDelay = 7400;
 
@@ -28,10 +28,11 @@ class Temperature{
         DallasTemperature sensors;
 
     public:
-        void begin(int tempPin_, float setpoint_, int firePin_);
+        Temperature(int tempPin_, float setpoint_, int powerPin_);
         float getTemp();
-        float getPIDDelay();
-        void fireHeaterPulse(float PIDValue);
+        void heat(float temp);
+        void turnOn();
+        void turnOff();
 
 };
 

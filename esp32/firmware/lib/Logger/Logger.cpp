@@ -51,6 +51,21 @@ void Logger::sendTempData(float temp){
     
 }
 
+void Logger::sendECData(float EC){
+    if(WiFi.status() == 3){
+        WiFiClient client;
+        HTTPClient http;
+        http.begin(client, "https://www.growhab.com/inputECData");
+        http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+        String data = "password=" + String(DATA_PASSWORD) + "&temperature=" + String(EC);
+        int respCode = http.POST(data);
+        if(respCode != 200)
+            failedSendHandler();
+    }else{
+        failedSendHandler();
+    }
+}
+
 void Logger::failedSendHandler(){
     /*
     * this function increments the number of failed sends in the EEPROM

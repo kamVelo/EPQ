@@ -23,7 +23,7 @@ def inputTempData():
     return str((password, checkPassword(password)))
 
 @app.route("/inputECData",methods=["POST"])
-def inputTempData():
+def inputECData():
     data = list(request.form.items())
     password = data[0][1]
     if(checkPassword(password)):

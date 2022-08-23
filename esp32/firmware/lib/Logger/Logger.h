@@ -24,6 +24,7 @@ class Logger{
 
     Logger();
     void sendTempData(float temp);
+    void sendECData(float EC);
 
 
     void failedSendHandler();

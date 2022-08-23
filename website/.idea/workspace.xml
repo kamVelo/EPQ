@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32621758-c321-4db2-a94a-24b5214dd73e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ECData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../esp32/ecProbeTest/ecProbeTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/ecProbeTest/ecProbeTest.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../esp32/firmware/lib/Logger/Logger.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/firmware/lib/Logger/Logger.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../esp32/firmware/lib/Logger/Logger.h" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/firmware/lib/Logger/Logger.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../esp32/firmware/lib/Temperature/Temperature.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/firmware/lib/Temperature/Temperature.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../esp32/firmware/lib/Temperature/Temperature.h" beforeDir="false" afterPath="$PROJECT_DIR$/../esp32/firmware/lib/Temperature/Temperature.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -149,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661207218408</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added EC data">
+      <created>1661209281674</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661209281675</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -177,7 +188,8 @@
     <MESSAGE value="bug fix 6" />
     <MESSAGE value="bug fix 7" />
     <MESSAGE value="bug fix 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix 8" />
+    <MESSAGE value="added EC data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added EC data" />
   </component>
   <component name="WindowStateProjectService">
     <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1660016518815">
