@@ -8,15 +8,20 @@ Logger::Logger(){
     // to see how long the data outage was for retrospectively.
     // when esp32 reconnects, it will try and read the address of the data and see if data was unsent
     // if so, it sends an error message to server telling it how long the outage was for so server can log it.
-
+    Serial.begin(9600);
+    
+    WiFi.mode(WIFI_STA);
+    WiFi.disconnect();
     WiFi.begin(SSID1,PWD1);
     int counter = 0;
     while(WiFi.status() != 3 && counter < 21){
+        Serial.println(".");
         delay(250);
         counter++;
     }
-
+    Serial.println("Trying Hotspot");
     if(WiFi.status() != 3){ // if not at home or home wifi not working
+        Serial.println(".");
         WiFi.begin(SSID2,PWD2);
         counter = 0;
         while(WiFi.status() != 3 && counter < 21){
@@ -33,6 +38,8 @@ Logger::Logger(){
         if(numFails != 0)
             sendNumFails(numFails);
     }
+    
+    
 }
 
 void Logger::sendTempData(float temp){
@@ -43,12 +50,14 @@ void Logger::sendTempData(float temp){
         http.addHeader("Content-Type", "application/x-www-form-urlencoded");
         String data = "password=" + String(DATA_PASSWORD) + "&temperature=" + String(temp);
         int respCode = http.POST(data);
+        Serial.println(respCode);
         if(respCode != 200)
             failedSendHandler();
+        else Serial.print("Successful ");
     }else{
         failedSendHandler();
     }
-    
+    Serial.println(temp);
 }
 
 void Logger::sendECData(float EC){
@@ -57,19 +66,23 @@ void Logger::sendECData(float EC){
         HTTPClient http;
         http.begin(client, "https://www.growhab.com/inputECData");
         http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-        String data = "password=" + String(DATA_PASSWORD) + "&temperature=" + String(EC);
+        String data = "password=" + String(DATA_PASSWORD) + "&EC=" + String(EC);
         int respCode = http.POST(data);
+        Serial.println(respCode);
         if(respCode != 200)
             failedSendHandler();
+        else Serial.print("Successful ");
     }else{
         failedSendHandler();
     }
+    Serial.println(EC);
 }
 
 void Logger::failedSendHandler(){
     /*
     * this function increments the number of failed sends in the EEPROM
     */
+   Serial.println(WiFi.status());
    int numFailed = EEPROM.read(0);
    numFailed++;
    EEPROM.write(0, numFailed);

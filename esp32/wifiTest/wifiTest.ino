@@ -27,6 +27,7 @@ void loop() {
 
 
 void sendTempData(float temp){
+  
     if(WiFi.status() == 3){
         WiFiClient client;
         HTTPClient http;
@@ -39,7 +40,6 @@ void sendTempData(float temp){
     }else{
         Serial.println("failed not connected");
     }
-    
 }
 
 float getTemp(){

@@ -4,7 +4,7 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <EEPROM.h>
-#include "secrets.h"
+#include "Secrets.h"
 
 #define EEPROM_SIZE 1
 
